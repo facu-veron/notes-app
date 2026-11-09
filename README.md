@@ -45,15 +45,24 @@ notes-app/
    docker compose up -d --build
    ```
 
-   Esto levanta dos servicios:
+   Esto levanta tres servicios:
    - `app`: servidor PHP + Apache en el puerto `8080`
    - `db`: MySQL en el puerto `3306`, con la base `notes_app` y la tabla `notes` creadas automáticamente a partir de `schema.sql`
+   - `phpmyadmin`: interfaz web para explorar la base de datos en el puerto `8081`
 
 3. Abrir la aplicación en el navegador:
 
    ```
    http://localhost:8080
    ```
+
+4. (Opcional) Abrir phpMyAdmin para ver los datos de la base:
+
+   ```
+   http://localhost:8081
+   ```
+
+   Usuario: `notes_user` · Contraseña: `notes_pass` · Servidor: `db` (ya precargado)
 
 ### Apagar el proyecto
 
